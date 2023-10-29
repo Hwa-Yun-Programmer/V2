@@ -60,7 +60,7 @@ module.exports = {
                     .then((msg) => {
                         setTimeout(() => msg.delete(), 10000);
                     });
-            queue.removeTrack(track_to_remove).catch((err) => console.log(err));
+            queue.removeTrack(track_to_remove);
             BaseEmbed.setAuthor({ name: `✅ **${track_to_remove.title}** 노래를 재생목록에서 삭제했어요!` });
 
             return inter.editReply({ embeds: [BaseEmbed] });
@@ -80,7 +80,7 @@ module.exports = {
                         setTimeout(() => msg.delete(), 10000);
                     });
 
-            queue.removeTrack(index).catch((err) => console.log(err));
+            queue.removeTrack(index);
 
             BaseEmbed.setAuthor({ name: `✅ **${track_to_remove.title}** 노래를 재생목록에서 삭제했어요!` });
 

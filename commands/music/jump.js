@@ -60,7 +60,7 @@ module.exports = {
                     .then((msg) => {
                         setTimeout(() => msg.delete(), 10000);
                     });
-            queue.node.jump(track_to_jump).catch((err) => console.log(err));
+            queue.node.jump(track_to_jump);
             return inter.editReply({ content: `✅ **${track_to_jump.title}**  노래로 넘어갔어요!` });
         }
         if (number) {
@@ -75,7 +75,7 @@ module.exports = {
                     .then((msg) => {
                         setTimeout(() => msg.delete(), 10000);
                     });
-            queue.node.jump(index).catch((err) => console.log(err));
+            queue.node.jump(index);
 
             const JumpEmbed = new EmbedBuilder()
                 .setAuthor({ name: `✅ **${trackname}** 로 넘어갔어요! ` })

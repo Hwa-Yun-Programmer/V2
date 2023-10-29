@@ -43,7 +43,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        const success = queue.node.setVolume(vol).catch((err) => console.log(err));
+        const success = queue.node.setVolume(vol);
 
         return inter
             .editReply({

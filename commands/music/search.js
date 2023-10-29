@@ -101,7 +101,7 @@ module.exports = {
 
             await inter.followUp('✅ 재생목록에 추가되었어요!');
 
-            queue.addTrack(res.tracks[query.content - 1]).catch((err) => console.log(err));
+            queue.addTrack(res.tracks[query.content - 1]);
 
             if (!queue.isPlaying()) await queue.node.play();
         });

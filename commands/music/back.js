@@ -30,7 +30,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        await queue.history.back().catch((err) => console.log(err));
+        await queue.history.back();
 
         const BackEmbed = new EmbedBuilder()
             .setAuthor({ name: '✅ 이전 노래로 돌아갔어요!', ephemeral: true })

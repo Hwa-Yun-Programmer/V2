@@ -30,7 +30,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        await queue.tracks.clear().catch((err) => console.log(err));
+        await queue.tracks.clear();
 
         const ClearEmbed = new EmbedBuilder().setAuthor({ name: '🗑️ 재생목록을 모두 지웠어요!' }).setColor('#2f3136');
 

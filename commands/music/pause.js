@@ -30,7 +30,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        const success = queue.node.setPaused(true).catch((err) => console.log(err));
+        const success = queue.node.setPaused(true);
 
         const PauseEmbed = new EmbedBuilder()
             .setAuthor({

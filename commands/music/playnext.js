@@ -51,7 +51,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        queue.insertTrack(res.tracks[0], 0).catch((err) => console.log(err));
+        queue.insertTrack(res.tracks[0], 0);
 
         const PlayNextEmbed = new EmbedBuilder()
             .setAuthor({ name: '🎧 재생목록에 해당 노래가 추가되었어요!' })

@@ -21,7 +21,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        queue.delete().catch((err) => console.log(err));
+        queue.delete();
 
         const StopEmbed = new EmbedBuilder()
             .setColor('#2f3136')

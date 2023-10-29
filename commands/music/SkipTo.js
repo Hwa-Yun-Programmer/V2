@@ -48,7 +48,7 @@ module.exports = {
                     content: `❌ ${track}을 찾을수 없어요! 노래의 전체 제목이나 링크을 이용해보실래요?`,
                     ephemeral: true,
                 });
-            queue.node.skipTo(track_skipto).catch((err) => console.log(err));
+            queue.node.skipTo(track_skipto);
             return inter.editReply({ content: `✅ **${track_skipto.title}** 노래로 건너뛰었어요!` });
         }
         if (number) {
@@ -59,7 +59,7 @@ module.exports = {
                     content: '❌ 해당 번호의 노래가 존재하지 않아요!',
                     ephemeral: true,
                 });
-            queue.node.skipTo(index).catch((err) => console.log(err));
+            queue.node.skipTo(index);
 
             const skipToEmbed = new EmbedBuilder()
                 .setAuthor({ name: `✅ **${trackname}** 노래로 건너뛰었어요!` })

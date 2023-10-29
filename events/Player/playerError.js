@@ -8,9 +8,7 @@ module.exports = (queue, error) => {
         })
         .setColor('#EE4B2B');
 
-    queue.metadata.send({ embeds: [ErrorEmbed] }).then((msg) => {
-        setTimeout(() => msg.delete(), 10000);
-    });
+    queue.metadata.send({ embeds: [ErrorEmbed] });
 
     console.log(`도비가 고장났어요! ${error.message}`);
 };

@@ -31,7 +31,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        const success = queue.node.resume().catch((err) => console.log(err));
+        const success = queue.node.resume();
 
         const ResumeEmbed = new EmbedBuilder()
             .setAuthor({

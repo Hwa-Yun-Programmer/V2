@@ -21,7 +21,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        const success = queue.node.skip().catch((err) => console.log(err));
+        const success = queue.node.skip();
 
         const SkipEmbed = new EmbedBuilder()
             .setColor('#2f3136')

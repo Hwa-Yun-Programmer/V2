@@ -41,7 +41,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        await queue.node.seek(timeToMS).catch((err) => console.log(err));
+        await queue.node.seek(timeToMS);
 
         const SeekEmbed = new EmbedBuilder()
             .setColor('#2f3136')

@@ -31,7 +31,7 @@ module.exports = {
                     setTimeout(() => msg.delete(), 10000);
                 });
 
-        await queue.tracks.shuffle().catch((err) => console.log(err));
+        await queue.tracks.shuffle();
 
         const ShuffleEmbed = new EmbedBuilder()
             .setColor('#2f3136')

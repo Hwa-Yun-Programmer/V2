@@ -40,12 +40,9 @@ module.exports = {
                 ? `재생목록에 **${songs - 5}** 곡의 노래가 대기중이에요!`
                 : `재생목록에 **${songs}** 곡의 노래가 대기중이에요!`;
 
-        const tracks = queue.tracks
-            .map(
-                (track, i) =>
-                    `**${i + 1}** - ${track.title} | ${track.author} (신청자 : ${track.requestedBy.username})`,
-            )
-            .catch((err) => console.log(err));
+        const tracks = queue.tracks.map(
+            (track, i) => `**${i + 1}** - ${track.title} | ${track.author} (신청자 : ${track.requestedBy.username})`,
+        );
 
         const embed = new EmbedBuilder()
             .setColor('#2f3136')
@@ -60,9 +57,7 @@ module.exports = {
                     .join('\n')}\n\n${nextSongs}`,
             )
             .setTimestamp()
-            .setFooter({
-                iconURL: inter.member.avatarURL({ dynamic: true }),
-            });
+            .setFooter({ text: 'Made By Dobby.', iconURL: inter.member.avatarURL({ dynamic: true }) });
 
         inter.editReply({ embeds: [embed] });
     },
