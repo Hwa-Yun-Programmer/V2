@@ -66,12 +66,7 @@ module.exports = {
 
         collector.on('collect', async (query) => {
             if (query.content.toLowerCase() === '취소')
-                return (
-                    inter.followUp({ content: '✅ 검색이 취소되었어요!', ephemeral: true }),
-                    collector.stop().then((msg) => {
-                        setTimeout(() => msg.delete(), 10000);
-                    })
-                );
+                return inter.followUp({ content: '✅ 검색이 취소되었어요!', ephemeral: true }), collector.stop();
 
             const value = parseInt(query);
             if (!value || value <= 0 || value > maxTracks.length)

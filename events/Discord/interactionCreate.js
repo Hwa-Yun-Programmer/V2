@@ -4,21 +4,8 @@ const { useQueue } = require('discord-player');
 module.exports = async (client, inter) => {
     await inter.deferReply();
     if (inter.type === InteractionType.ApplicationCommand) {
-        const DJ = client.config.opt.DJ;
         const command = client.commands.get(inter.commandName);
 
-        if (!command)
-            return (
-                inter.editReply({
-                    embeds: [
-                        new EmbedBuilder()
-                            .setColor('#ff0000')
-                            .setDescription('❌ | 오류! 개발자 <@359340249849004043> 으로 DM 부탁드립니다!'),
-                    ],
-                    ephemeral: true,
-                }),
-                client.slash.delete(inter.commandName)
-            );
         if (command.permissions && !inter.member.permissions.has(command.permissions))
             return inter.editReply({
                 embeds: [
