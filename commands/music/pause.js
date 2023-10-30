@@ -3,7 +3,7 @@ const { useMainPlayer, useQueue } = require('discord-player');
 
 module.exports = {
     name: 'pause',
-    description: 'pause the track',
+    description: '노래를 일시정지할수 있어요!',
     voiceChannel: true,
 
     execute({ inter }) {

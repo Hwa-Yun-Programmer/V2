@@ -3,7 +3,7 @@ module.exports = async ({ inter, queue }) => {
     const methods = ['disabled', 'track', 'queue'];
 
     if (!queue || !queue.isPlaying())
-        return inter.editReply({ content: `No music currently playing... try again ? ❌`, ephemeral: true });
+        return inter.editReply({ content: '❌ 노래가 재생중이지 않아요!', ephemeral: true });
 
     const repeatMode = queue.repeatMode;
 
@@ -13,5 +13,5 @@ module.exports = async ({ inter, queue }) => {
 
     if (repeatMode === 2) queue.setRepeatMode(QueueRepeatMode.OFF);
 
-    return inter.editReply({ content: `loop made has been set to **${methods[queue.repeatMode]}**.✅` });
+    return inter.editReply({ content: `✅ 노래 반복설정을 **${methods[queue.repeatMode]}**모드로 설정했어요!` });
 };

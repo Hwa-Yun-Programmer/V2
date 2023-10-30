@@ -31,7 +31,6 @@ readdirSync('./commands/').forEach((dirs) => {
         const command = require(`../commands/${dirs}/${file}`);
         if (command.name && command.description) {
             CommandsArray.push(command);
-            client.commands.set(command.name.toLowerCase(), command);
             commandTable.addRow(file, 'Loaded');
             delete require.cache[require.resolve(`../commands/${dirs}/${file}`)];
         } else {

@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js');
 module.exports = async ({ client, inter, queue }) => {
     if (!queue || !queue.isPlaying())
-        return inter.editReply({ content: `No music currently playing... try again ? ❌`, ephemeral: true });
+        return inter.editReply({ content: '❌ 노래가 재생중이지 않아요!', ephemeral: true });
 
     const track = queue.currentTrack;
 
@@ -22,7 +22,7 @@ module.exports = async ({ client, inter, queue }) => {
             }**\nRequested by ${track.requestedBy}`,
         )
         .setFooter({
-            text: 'Music comes first - Made with heart by Zerio ❤️',
+            text: 'Made by Dobby',
             iconURL: inter.member.avatarURL({ dynamic: true }),
         })
         .setColor('ff0000')

@@ -52,7 +52,7 @@ module.exports = {
             .then(() => {
                 return inter
                     .editReply({
-                        content: `I have sent you the title of the music by private messages ✅`,
+                        content: '✅ DM으로 노래정보를 보내드렸어요!',
                         ephemeral: true,
                     })
                     .then((msg) => {
@@ -62,7 +62,7 @@ module.exports = {
             .catch((error) => {
                 return inter
                     .editReply({
-                        content: `Unable to send you a private message... try again ? ❌`,
+                        content: '❌ DM으로 노래정보를 보낼수 없어요!',
                         ephemeral: true,
                     })
                     .then((msg) => {

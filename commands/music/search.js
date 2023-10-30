@@ -51,6 +51,7 @@ module.exports = {
             )
             .setTimestamp()
             .setFooter({
+                text: 'Made by Dobby',
                 iconURL: inter.member.avatarURL({ dynamic: true }),
             });
 

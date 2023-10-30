@@ -4,7 +4,6 @@ module.exports = (queue, error) => {
     const ErrorEmbed = new EmbedBuilder()
         .setAuthor({
             name: `도비가 고장났어요!`,
-            iconURL: track.thumbnail,
         })
         .setColor('#EE4B2B');
 

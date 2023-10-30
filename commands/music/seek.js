@@ -4,7 +4,7 @@ const { useMainPlayer, useQueue } = require('discord-player');
 
 module.exports = {
     name: 'seek',
-    description: 'skip back or foward in a song',
+    description: '노래 재생시간을 조절할수 있어요!',
     voiceChannel: true,
     options: [
         {

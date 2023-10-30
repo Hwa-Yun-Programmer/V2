@@ -36,7 +36,7 @@ module.exports = {
             .setDescription(
                 `볼륨 : **${queue.node.volume}**%\n재생시간 : **${trackDuration}**\nProgress ${progress}\n반복 설정 **${
                     methods[queue.repeatMode]
-                }**\nRequested by ${track.requestedBy}`,
+                }**\n신청자 ${track.requestedBy}`,
             )
             .setFooter({
                 iconURL: inter.member.avatarURL({ dynamic: true }),

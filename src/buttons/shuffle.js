@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js');
 module.exports = async ({ client, inter, queue }) => {
     if (!queue || !queue.isPlaying())
-        return inter.editReply({ content: `No music currently playing... try again ? ❌`, ephemeral: true });
+        return inter.editReply({ content: '❌ 노래가 재생중이지 않아요!', ephemeral: true });
 
     if (!queue.tracks.toArray()[0])
         return inter.editReply({
